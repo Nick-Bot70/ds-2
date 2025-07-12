@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pay with Paytm</title>
+  <style>
+    body {
+      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      color: #3b3b3b;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background-color: #00baf2;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #008ac6;
+    }
+
+    .note {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pay ₹100 to Rijwan Khan</h1>
+  <button onclick="launchPaytm()">Pay with Paytm</button>
+
+  <p class="note">Make sure Paytm app is installed on your phone.</p>
+
+  <script>
+    function launchPaytm() {
+      const paytmLink = "paytmmp://cash_wallet?pa=738482yimi020@iob&pn=Rijwan%20Khan&tn=G5QTrXKe&tr=G5QTrXKe&am=100.00&cu=INR&featuretype=money_transfer";
+      window.location.href = paytmLink;
+    }
+  </script>
+
+</body>
+</html>
